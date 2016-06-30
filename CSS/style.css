@@ -1,6 +1,4 @@
-/* -------------------------------- 
-Primary style
--------------------------------- */
+
 html * {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -12,15 +10,10 @@ html * {
   box-sizing: border-box;
 }
 
-
-
 a {
   text-decoration: none;
 }
 
-/* -------------------------------- 
-Main components 
--------------------------------- */
 .header {
   position: fixed;
   top: 0;
@@ -72,12 +65,13 @@ Main components
 }
 .main-nav a {
   display: block;
+  text-decoration: none;
   height: 20px;
   line-height: 20px;
   padding-left: 5%;
-  background: #2f292a;
+  background: #5D6985;
   border-top: 1px solid #453c3d;
-  color: #8e7d7f;
+  color: #ffffff;
 }
 @media only screen and (min-width: 768px) {
   .main-nav {
@@ -216,16 +210,4 @@ Main components
     line-height: 2;
     font-weight: 300;
   }
-}
-
-
-
-
-
-
-
-
-
-
-
-   
+}   
