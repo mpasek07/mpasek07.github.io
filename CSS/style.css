@@ -1,0 +1,231 @@
+/* -------------------------------- 
+Primary style
+-------------------------------- */
+html * {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+
+
+a {
+  text-decoration: none;
+}
+
+/* -------------------------------- 
+Main components 
+-------------------------------- */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  z-index: 2;
+}
+.header:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@media only screen and (min-width: 768px) {
+  .header {
+    height: 40px;
+  }
+}
+
+.main-nav {
+  float: right;
+  margin-right: 5%;
+  width: 30px;
+  height: 100%;
+  background: url("../Images/cd-icon-menu.svg") no-repeat center center;
+  background-size: 44px 44px;
+  cursor: pointer;
+}
+.main-nav ul {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  -webkit-transform: translateY(-100%);
+  -moz-transform: translateY(-100%);
+  -ms-transform: translateY(-100%);
+  -o-transform: translateY(-100%);
+  transform: translateY(-100%);
+}
+.main-nav ul.is-visible {
+  -webkit-transform: translateY(50px);
+  -moz-transform: translateY(50px);
+  -ms-transform: translateY(50px);
+  -o-transform: translateY(50px);
+  transform: translateY(50px);
+}
+.main-nav a {
+  display: block;
+  height: 20px;
+  line-height: 20px;
+  padding-left: 5%;
+  background: #2f292a;
+  border-top: 1px solid #453c3d;
+  color: #8e7d7f;
+}
+@media only screen and (min-width: 768px) {
+  .main-nav {
+    width: auto;
+    height: auto;
+    background: none;
+    cursor: auto;
+  }
+  .main-nav ul {
+    position: static;
+    width: auto;
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+    transform: translateY(0);
+    line-height: 40px;
+  }
+  .main-nav ul.is-visible {
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+    transform: translateY(0);
+  }
+  .main-nav li {
+    display: inline-block;
+    margin-left: 1em;
+  }
+  .main-nav a {
+    display: inline-block;
+    height: auto;
+    line-height: normal;
+    background: transparent;
+    padding: .6em 1em;
+    border-top: none;
+    color: #3d3536;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1rem;
+	letter-spacing: 0.1em;
+  }
+  .no-touch .main-nav a:hover {
+    color: #000;
+  }
+}
+
+.main-content {
+  /* you need to assign a min-height to the main content so that the children can inherit it*/
+  height: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.fixed-bg {
+  position: relative;
+  min-height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  z-index: 1;
+}
+.fixed-bg h1, .fixed-bg h2, {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  bottom: auto;
+  right: auto;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -o-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  width: 90%;
+  max-width: 1170px;
+  font-size: 48px;
+  font-weight: 300;
+  font-size: 1.875rem;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  color: white;
+}
+.fixed-bg.bg-1 {
+  background-image: url('../Images/field_2.jpg');
+}
+.fixed-bg.bg-2 {
+  background-image: url('../Images/seats_2.jpg');
+}
+.fixed-bg.bg-3 {
+  background-image: url('../Images/player_2.jpg');
+}
+
+@media only screen and (min-width: 768px) {
+  .fixed-bg h1, .fixed-bg h2 {
+    font-size: 48px;
+	font-weight: 300;
+  }
+}
+@media only screen and (min-width: 1170px) {
+  .fixed-bg {
+    background-attachment: fixed;
+  }
+  .fixed-bg h1, .fixed-bg h2 {
+    font-size: 48px;
+    font-weight: 300;
+  }
+}
+
+.scrolling-bg {
+  position: relative;
+  min-height: 100%;
+  font-size: 48px;
+  font-weight: 300;
+  padding: 2em 0;
+  line-height: 1.6;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+  z-index: 2;
+}
+.scrolling-bg.color-1 {
+  background-color: ##232D34;
+  color: #ffffff;
+}
+.scrolling-bg.color-2 {
+  background-color: ##232D34;
+  color: #ffffff;
+}
+.scrolling-bg.color-3 {
+  background-color: #232D34;
+  color: #ffffff;
+}
+@media only screen and (min-width: 768px) {
+  .scrolling-bg {
+    padding: 8em 0;
+    font-size: 48px;
+	font-weight: 300;
+    font-size: 1.25rem;
+    line-height: 2;
+    font-weight: 300;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+   
